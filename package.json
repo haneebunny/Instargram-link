@@ -1,24 +1,25 @@
 {
   "name": "instargram-link",
   "version": "1.0.0",
-  "description": "<div align=center> https://haneebunny.github.io/Instargram-link/ </br>",
-  "main": "main.js",
+  "description": "A static web project for Instagram links.",
   "scripts": {
-    "build": "sass main.scss main.css",
-    "watch": "sass --watch main.scss:main.css"
+    "build": "sass src/main.scss public/main.css",
+    "watch": "sass --watch src/main.scss:public/main.css",
+    "start": "live-server" 
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/haneebunny/Instargram-link.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["instagram", "link", "static-web"],
+  "author": "haneebunny",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/haneebunny/Instargram-link/issues"
   },
-  "homepage": "https://github.com/haneebunny/Instargram-link#readme",
+  "homepage": "https://haneebunny.github.io/Instargram-link/",
   "devDependencies": {
-    "sass": "^1.83.0"
+    "sass": "^1.83.0",
+    "live-server": "^1.2.2" 
   }
 }

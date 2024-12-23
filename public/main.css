@@ -32,7 +32,7 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  background: url("/img/profile.png") center/cover;
+  background: url("/public/img/profile.png") center/cover;
 }
 .wrapper .main {
   color: rgb(90, 75, 56);

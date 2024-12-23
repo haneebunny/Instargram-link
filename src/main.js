@@ -59,7 +59,7 @@ function renderReviews(reviews) {
         ${
           review.user_image
             ? `<img src="${review.user_image}" alt="${review.user}" style="width: 50px; height: 50px; border-radius: 50%;" />`
-            : `<img src="/img/cozzi_icon.png" style="width: 30px; height: 30px; border-radius: 50%;"/>`
+            : `<img src="/public/img/cozzi_icon.png" style="width: 30px; height: 30px; border-radius: 50%;"/>`
         } 
         <span style="display: block; color: #555;"> ${review.user}</span>
         <div>${stars}</div>
