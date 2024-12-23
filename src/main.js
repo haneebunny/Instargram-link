@@ -1,3 +1,5 @@
+import "./main.scss";
+
 const accountNumber = "신한 110-5353-27673";
 
 document.addEventListener("DOMContentLoaded", () => {
