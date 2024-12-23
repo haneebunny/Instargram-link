@@ -1,6 +1,14 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
+  base: "/", // 개발 및 빌드 경로 통일
+
+  resolve: {
+    alias: {
+      "@": "/src", // '@'로 'src/' 참조
+    },
+  },
   build: {
     outDir: "dist", // 빌드 결과 디렉터리
     rollupOptions: {
