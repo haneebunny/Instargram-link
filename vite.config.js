@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/", // 개발 및 빌드 경로 통일
   build: {
     outDir: "dist", // 빌드 결과 디렉터리
     rollupOptions: {
