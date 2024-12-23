@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "A static web project for Instagram links.",
   "scripts": {
-    "clean": "rimraf dist",
-    "build-css": "sass src/main.scss public/main.css --style compressed",
-    "copy-html": "mkdir -p dist && cp index.html dist/index.html",
-    "copy-src": "cp -r src dist/src",
-    "copy-assets": "cp -r public dist/public",
-    "build": "npm run clean && npm run build-css && npm run copy-html && npm run copy-src && npm run copy-assets"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -28,6 +25,7 @@
   "devDependencies": {
     "live-server": "^1.2.2",
     "rimraf": "^6.0.1",
-    "sass": "^1.83.0"
+    "sass": "^1.83.0",
+    "vite": "^6.0.5"
   }
 }
