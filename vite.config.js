@@ -14,8 +14,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: "index.html", // index.html을 번들링 대상에 포함
-        main: "./src/main.js", // main.js를 번들링에 포함
-        loading: "./src/loading.js", // loading.js를 번들링에 포함
+        main: "./assets/main.js", // main.js를 번들링에 포함
+        loading: "./assets/loading.js", // loading.js를 번들링에 포함
       },
       output: {
         entryFileNames: "assets/[name].js", // JS 파일 이름 설정
