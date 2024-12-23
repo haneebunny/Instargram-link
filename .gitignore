@@ -1,0 +1,10 @@
+# 빌드 결과물
+dist/
+public/main.css
+
+# Node.js 의존성
+node_modules/
+
+# 운영 체제 파일
+.DS_Store
+Thumbs.db
