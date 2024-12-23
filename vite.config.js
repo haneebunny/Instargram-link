@@ -7,7 +7,11 @@ export default defineConfig({
       input: "index.html", // 진입점 파일
     },
   },
-  server: {
-    open: true, // 개발 서버 실행 시 자동으로 브라우저 열기
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/styles/variables.scss";`, // 공통 SCSS 설정
+      },
+    },
   },
 });
