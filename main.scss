@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+// Fonts
+@font-face {
+  font-family: "DOSSaemmul";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSSaemmul.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ownglyph_ParkDaHyun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Variables
+$background-color: rgb(255, 240, 221);
+$text-color: rgb(90, 75, 56);
+$gradient-start: rgb(255, 209, 215);
+$gradient-end: rgb(140, 231, 196);
+$box-shadow: 0px 4px 16px rgba(232, 52, 78, 0.2);
+$hover-border: rgb(236, 200, 153);
+$spinner-color: #b2e7b5;
+
+// Global Styles
+body {
+  font-family: "Ownglyph_ParkDaHyun";
+  background-color: $background-color;
+}
+
+button {
+  font-family: "Ownglyph_ParkDaHyun";
+}
+
+// Wrapper
+.wrapper {
+  width: 300px;
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: url("/img/profile.png") center / cover;
+  }
+
+  .main {
+    color: $text-color;
+    font-size: 30px;
+  }
+
+  .sub {
+    font-size: 1.3em;
+    margin: 0 0 30px 0;
+    background: linear-gradient(
+      90deg,
+      $gradient-start 15%,
+      $gradient-end 35%,
+      $gradient-start 50%,
+      $gradient-end 85%,
+      $gradient-start
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% 100%;
+    animation: gradient 3.5s linear infinite;
+  }
+
+  a,
+  #copy-button {
+    text-decoration: none;
+    width: 300px;
+    height: 60px;
+    font-size: 1.4em;
+    background-color: rgba(255, 255, 255, 0.506);
+    color: $text-color;
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+    transition: all 0.8s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border: 1px solid $hover-border;
+      cursor: pointer;
+    }
+  }
+}
+
+// review
+
+.review-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Loading Screen
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid $spinner-color;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  .loading-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+  }
+}
+
+// toast
+.toast {
+  position: fixed;
+  top: -50px; /* 기본적으로 화면 위로 숨김 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $spinner-color;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.toast.show {
+  top: 20px; /* 화면 안으로 내려오기 */
+  opacity: 1;
+}
+
+// Keyframes
+@keyframes gradient {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

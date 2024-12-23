@@ -1,23 +1,27 @@
 @charset "UTF-8";
 @font-face {
   font-family: "DOSSaemmul";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSSaemmul.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSSaemmul.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "YoonChildfundkoreaManSeh";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2") format("woff2");
+  font-family: "Ownglyph_ParkDaHyun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 body {
-  font-family: "YoonChildfundkoreaManSeh";
+  font-family: "Ownglyph_ParkDaHyun";
   background-color: rgb(255, 240, 221);
 }
 
 button {
-  font-family: "YoonChildfundkoreaManSeh";
+  font-family: "Ownglyph_ParkDaHyun";
 }
 
 .wrapper {
@@ -42,9 +46,16 @@ button {
 }
 
 .sub {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin: 0px 0px 30px 0px;
-  background: linear-gradient(90deg, rgb(255, 209, 215) 15%, rgb(140, 231, 196) 35%, rgb(255, 209, 215) 50%, rgb(140, 231, 196) 85%, rgb(255, 209, 215));
+  background: linear-gradient(
+    90deg,
+    rgb(255, 209, 215) 15%,
+    rgb(140, 231, 196) 35%,
+    rgb(255, 209, 215) 50%,
+    rgb(140, 231, 196) 85%,
+    rgb(255, 209, 215)
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -104,3 +115,42 @@ button {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* 배경 테두리 색 */
+  border-top: 4px solid #b2e7b5; /* 부드러운 연두색 파스텔톤 */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 10px; /* 스피너와 텍스트 사이 여백 */
+  font-size: 16px;
+  color: #555; /* 차분한 색상 */
+  text-align: center;
+}
