@@ -6,8 +6,9 @@
     "clean": "rimraf dist",
     "build-css": "sass src/main.scss public/main.css --style compressed",
     "copy-html": "mkdir -p dist && cp index.html dist/index.html",
-    "copy-assets": "cp -r public dist/public && cp src/main.js dist/",
-    "build": "npm run clean && npm run build-css && npm run copy-html && npm run copy-assets"
+    "copy-src": "cp -r src dist/src",
+    "copy-assets": "cp -r public dist/public",
+    "build": "npm run clean && npm run build-css && npm run copy-html && npm run copy-src && npm run copy-assets"
   },
   "repository": {
     "type": "git",
